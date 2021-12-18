@@ -13,7 +13,7 @@ ID,name,description,notes,increment,measurement,multiplier
 12,Yoga,Yoga,,15,mins,1.5
 13,Zumba,Zumba,,15,mins,1.5
 14,Rowing,Rowing,,15,mins,1.5
-15,Throwing,Throwing,,15,mins,1.5
+15,Throwing,Throwing,,15,mins,1.75
 16,Physical Therapy,Physical Therapy,,15,mins,1.75
 17,Core,Core,,10,mins,1.75
 18,Agility Drills,Agility Drills (cones/ladders),,15,mins,1.75
@@ -24,16 +24,16 @@ ID,name,description,notes,increment,measurement,multiplier
 23,Kickboxing,Kickboxing,,15,mins,1.75
 24,Distance Running,Running,,15,mins,1.75
 25,Swimming,Swimming,,15,mins,1.75
-26,Kung Fu/Zen Throwing,Kung Fu/Zen Throwing,,15,mins,1.75
-27,Lifting/Weight Training,Lifting/Weight Training,,15,mins,1.85
-28,P90x/CrossFit/Insanity Workout,P90x/CrossFit/Insanity Workout,,15,mins,1.85
-29,Plyometrics,"Plyometrics (squats, lunges, etc.)",,15,mins,1.85
-30,Stadiums/Stairs,Stadiums/Stairs,,15,mins,1.85
-31,Sprinting/Spinning Tabatas,Sprinting/Spinning Tabatas,,4,mins,1.85
-32,Track Workout,Track Workout,,15,mins,1.85
-33,Fun With Friends Drills (2+ people),Frisbee Drills,,15,mins,1.85
-34,Mental Strength - Yellow,Mental Strength - Repeatable (Yellow),,15,mins,2
-35,"Frisbee (beach, goaltie, pickup)","Frisbee (beach, goaltie, pickup)",,15,mins,2
+26,Lifting/Weight Training,Lifting/Weight Training,,15,mins,1.85
+27,P90x/CrossFit/Insanity Workout,P90x/CrossFit/Insanity Workout,,15,mins,1.85
+28,Plyometrics,"Plyometrics (squats, lunges, etc.)",,15,mins,1.85
+29,Stadiums/Stairs,Stadiums/Stairs,,15,mins,1.85
+30,Sprinting/Spinning Tabatas,Sprinting/Spinning Tabatas,,4,mins,1.85
+31,Track Workout,Track Workout,,15,mins,1.85
+32,Fun With Friends Drills (2+ people),Frisbee Drills,,15,mins,1.85
+33,Mental Strength - Yellow,Mental Strength - Repeatable (Yellow),,15,mins,2
+34,"Frisbee (beach, goaltie, pickup)","Frisbee (beach, goaltie, pickup)",,15,mins,2
+35,Kung Fu/Zen Throwing,Kung Fu/Zen Throwing,,15,mins,2
 36,Mental Strength - Blue,Mental Strength - One time (Blue),,15,mins,3
 37,Grow Our Sport,Introduce New People,,1,person,3
 38,Mental Strength - Purple,"Mental Strength - One time, Juicy (Purple)",,15,mins,4
