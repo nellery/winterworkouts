@@ -124,19 +124,19 @@
                     <tr>
                       <th>Total</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with class_score-->
+                        <th>{{ class_score }}</th> <!--Replace "???" with class_score-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Normalized</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with class_normalized-->
+                        <th>{{ class_normalized }}</th> <!--Replace "???" with class_normalized-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Per Day</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with per_day-->
+                        <th>{{ per_day }}</th> <!--Replace "???" with per_day-->
                       {% endfor %}
                     </tr>
                   </tbody>
