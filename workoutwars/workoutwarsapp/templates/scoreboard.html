@@ -48,7 +48,7 @@
         };
 
       // Instantiate and draw our chart, passing in some options.
-      // var chart = new google.visualization.ColumnChart(document.getElementById('class_chart_div')); UNCOMMENT THESE THEY SHOULD BE THERE
+      // var chart = new google.visualization.ColumnChart(document.getElementById('class_chart_div')); UNCOMMENT THESE
       // chart.draw(data, options);
     }
   </script>
@@ -124,19 +124,19 @@
                     <tr>
                       <th>Total</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ class_score }}</th> <!--Replace "???" with class_score-->
+                        <th>{{ "???" }}</th> <!--Replace "???" with class_score-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Normalized</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ class_normalized }}</th> <!--Replace "???" with class_normalized-->
+                        <th>{{ "???" }}</th> <!--Replace "???" with class_normalized-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Per Day</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ per_day }}</th> <!--Replace "???" with per_day-->
+                        <th>{{ "???" }}</th> <!--Replace "???" with per_day-->
                       {% endfor %}
                     </tr>
                   </tbody>
