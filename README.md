@@ -1,16 +1,16 @@
-# Workout Wars 2017-2018
+# Workout Wars 2021-2022
 Pie Queens workout wars application
 
 ## Getting Started
 
 ### Fork and Clone the Git Repository
 1. Make sure you are signed into github and have git installed on your computer.
-2. In the top right corner of this page, click `Fork`. This will create your own copy of the codebase on your account. Feel free to rename the app from `workoutwars18` to fit the year.
+2. In the top right corner of this page, click `Fork`. This will create your own copy of the codebase on your account. Feel free to rename the app from `workoutwars21` to fit the year.
 3. From your newly forked repository on Github, click `Clone or Download` and copy the http url. Then, from your terminal, navigate to where you'd like to store the workout wars files and run the following command:
 ```
 git clone [YOUR-REPO-URL]
 ```
-For example, I would have run `git clone https://github.com/fabiola17lopez/workoutwars18.git`.
+For example, I would have run `git clone https://github.com/epersson10/workoutwars21.git`.
 
 4. You should now have the workout wars codebase downloaded on your computer.
 4. NOTE: only one person needs to fork the repository. Anyone else wanting to work on the application can be added as a collaborator on the repo. To add collaborators, select `Settings`>`Collaborators`. They will be able to clone and push updates to the forked repo.
@@ -37,7 +37,7 @@ This is the interactive Python shell. Hit `CTRL + D` or type `exit()` to exit it
 ```
 pip3 install virtualenv
 ```
-4. Navigate into your cloned repository (make sure you use the name of your repo if you changed it from `workoutwars18`):
+4. Navigate into your cloned repository (make sure you use the name of your repo if you changed it from `workoutwars21`):
 ```
 cd workoutwars18
 ```
@@ -47,9 +47,9 @@ virtualenv -p /usr/local/bin/python3 pqenv
 ```
 The `-p` flag tells `virtualenv` the path to the python version you want to use. If yours is different, make sure to replace it. The name `pqenv` is the environment name.
 
-6. You should now have a folder called `pqenv` inside your `workoutwars18` folder. Your structure should now look something like this:
+6. You should now have a folder called `pqenv` inside your `workoutwars21` folder. Your structure should now look something like this:
 ```
-workoutwars18
+workoutwars21
 ├── pqenv
 ├── workoutwars
 ├── .gitignore
@@ -76,10 +76,10 @@ pip3 install django-bootstrap4
 
 ### Launching Application Locally
 Launching the app locally is very simple. You simply need to prepare a few things before the app will run for the first time.
-1. Make a copy of `settings-example.py` (in `workoutwars18/workoutwars/workoutwars`) in the same directory and title it `settings.py`.
+1. Make a copy of `settings-example.py` (in `workoutwars21/workoutwars/workoutwars`) in the same directory and title it `settings.py`.
 2. Open `settings.py` and make sure that `DEBUG` is set to `True`.
 3. Change the `SECRET_KEY` to a long, random string of characters. This is for security reasons.
-4. Navigate to the app root (`workoutwars18/workoutwars`) and prepare your models for the database:
+4. Navigate to the app root (`workoutwars21/workoutwars`) and prepare your models for the database:
 ```
 python manage.py makemigrations
 ```
@@ -91,7 +91,7 @@ python manage.py migrate
 ```
 python manage.py runserver
 ```
-If run succesfully, you will be given an IP address in the command line, which when copied into your browser, should display the workout wars home page.
+If run successfully, you will be given an IP address in the command line, which when copied into your browser, should display the workout wars home page.
 
 ## Deploying the Application
 So far you've launched the app locally and learned how to import data. But how do you make it accessible to everyone else? These instructions are for hosting on a linode server, but feel free to use a different server if you are familiar with any.
@@ -100,7 +100,7 @@ So far you've launched the app locally and learned how to import data. But how d
 1. Follow Linode's [Getting Started Guide](https://linode.com/docs/getting-started/) to set up the server. A few things to note:
   - You will have to create an account and put in billing information. Don't worry - your treasurer will reimburse you for the cost of the server. There are also many promo codes out there for new accounts so get yourself some free credit!
   - The 2GB Linode with 50GB of storage is more than enough for us.
-  - **IMPORTANT**: Make sure you select **Ubuntu 14.04** as your OS - this will be important later. (Hopefully we are able to upgrade to Ubuntu 16 soon and can update these docs accordingly)
+  - **IMPORTANT**: Make sure you select **Ubuntu 16** as your OS - this will be important later.
   - You can choose your hostname to be whatever you want. I named mine `piequeens`
   - When updating /etc/hosts, you can use `workoutwars.piequeens.org` as your FQDN. Make sure to add both the IPv4 and IPv6 lines to the file. For example:
   ```
@@ -133,7 +133,7 @@ Next you need to set up workoutwars.piequeens.org to point to your new server. F
 3. Find the record named `workoutwars` of type `A` and edit the IP to point to the public **IPv4** address of your new server.
 4. Find the record named `workoutwars` of type `AAAA` and edit the IP to point to the public **IPv6** address of your new server.  Make sure to save your changes.
 
-### Set up your Environment on Ubuntu 14.04
+### Set up your Environment on Ubuntu
 1. Now that the server and domain are ready to be used, we can ssh into our new user with our new domain. To exit out of the root account, press CTRL+D. Then ssh back in with the new account:
 ```
 ssh pqadmin@workoutwars.piequeens.org
@@ -150,6 +150,8 @@ sudo pip install --upgrade pip
 ```
 sudo -H pip install virtualenv virtualenvwrapper
 ```
+**Note**: I (Rizzo) got stuck here because the python versions and Ubuntu versions were not very friendly with eachother. To be perfectly honest, I do not know how I fixed it. Lots of uninstalling Python and reinstalling it. Basically, make sure you are running Python3 and that the default python is Python3 - it may not be on Ubuntu 16.04. If you are more skilling than I am, you could consider updating this README to work with the newer versions of Ubuntu.
+
 5. For `virtualenvwrapper` to function correctly, run the following commands:
 ```
 echo "export WORKON_HOME=~/Env" >> ~/.bashrc
@@ -180,11 +182,11 @@ git clone [your repo http url].git
 ```
 11. Make a copy of `settings-example.py` called `settings.py`:
 ```
-cp /home/pqadmin/workoutwars18/workoutwars/workoutwars/settings-example.py /home/pqadmin/workoutwars18/workoutwars/workoutwars/settings.py
+cp /home/pqadmin/workoutwars21/workoutwars/workoutwars/settings-example.py /home/pqadmin/workoutwars21/workoutwars/workoutwars/settings.py
 ```
 12. Open `settings.py`:
 ```
-nano /home/pqadmin/workoutwars18/workoutwars/workoutwars/settings.py
+nano /home/pqadmin/workoutwars21/workoutwars/workoutwars/settings.py
 ```
 Change the secret key to a long, random string of characters. Make sure to keep this a secret!
 ```python
@@ -200,9 +202,9 @@ ALLOWED_HOSTS = ['workoutwars.piequeens.org', [YOUR SERVER IP], '127.0.0.1']
 ```
 Don't forget to save your changes!
 
-13. Check to see if the server is set up correctly by launching the application in developer mode (remember to replace `workoutwars18` with your repo name if you changed it):
+13. Check to see if the server is set up correctly by launching the application in developer mode (remember to replace `workoutwars21` with your repo name if you changed it):
 ```
-cd workoutwars18/workoutwars
+cd workoutwars21/workoutwars
 python manage.py collecstatic
 python manage.py makemigrations
 python manage.py migrate
@@ -226,7 +228,7 @@ sudo mkdir -p /etc/uwsgi/sites
 ```
 sudo nano /etc/uwsgi/sites/workoutwars.ini
 ```
-4. Paste the following into the file and save it (remember to replace `workoutwars18` with your repo name):
+4. Paste the following into the file and save it (remember to replace `workoutwars21` with your repo name):
 
 ```
 [uwsgi]
@@ -235,20 +237,20 @@ uid = pqadmin
 projenv = pqenv
 base = /home/%(uid)
 
-chdir = %(base)/workoutwars18/%(project)
+chdir = %(base)/workoutwars21/%(project)
 home = %(base)/Env/%(projenv)
 module = %(project).wsgi:application
 
 master = true
 processes = 2
 
-socket = %(base)/workoutwars18/%(project)/%(project).sock
+socket = %(base)/workoutwars21/%(project)/%(project).sock
 chmod-socket = 664
 vacuum = true
 ```
 5.  Create an Upstart job for uWSGI:
 ```
-sudo nano /etc/init/uwsgi.conf 
+sudo nano /etc/init/uwsgi.conf
 ```
 6. Paste the following contents in it and save:
 
@@ -278,7 +280,7 @@ sudo rm /etc/nginx/sites-enabled/default
 ```
 sudo nano /etc/nginx/sites-available/workoutwars
 ```
-3. Inside, paste the following (remember to replace `workoutwars18` with your repo name):
+3. Inside, paste the following (remember to replace `workoutwars21` with your repo name):
 ```
 server {
     listen 80;
@@ -307,7 +309,7 @@ sudo service nginx configtest && sudo service nginx restart
 
 ### Useful Links
 - We roughly followed [Linode's django deployment guide](https://linode.com/docs/web-servers/nginx/deploy-django-applications-using-uwsgi-and-nginx-on-ubuntu-14-04/) to deploy workout wars. If anything doesn't make sense, this is a great place to start.
-- [Digital Ocean's django deployment guide](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04) has more in-depth explanations about what each step is actually doing. If you get confused, this is a great resource! The troubleshooting section at the bottom is especially useful **if you're having trouble configuring uWSGI and/or nginx**. However, please note that this guide is for a newer version of ubuntu that we are not using. 
+- [Digital Ocean's django deployment guide](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04) has more in-depth explanations about what each step is actually doing. If you get confused, this is a great resource! The troubleshooting section at the bottom is especially useful **if you're having trouble configuring uWSGI and/or nginx**. However, please note that this guide is for a newer version of ubuntu that we are not using.
 
 ## Understanding How the Application Works
 
@@ -357,12 +359,12 @@ python manage.py createsuperuser
 4. Eventually, once you have your workout-logging account created, you'll be able to give yourself admin privileges. While logged into the admin dashboard as your superuser, select `Users`, and then your username. Under `Permissions`, check the boxes for "Staff status" and "Superuser status". This will allow you to control the application without having to log off of your personal account. If you do this, you can delete the superuser you originally created so it doesn't affect your scoreboards.
 5. You're going to need to update the year in a couple places in the app. Open up `workoutwarsapp/forms.py` and change the date selection dates to the correct years.
 ```python
-widget=forms.SelectDateWidget(years=(2017, 2018),
+widget=forms.SelectDateWidget(years=(2021, 2022),
         months={12:('December'), 1:('January')}),
 ```
 Next, open up `workoutwarsapp/views.py` and change the start date to the correct start date for this year.
 ```python
-START_DATE = datetime.date(2017, 12, 18)
+START_DATE = datetime.date(2021, 12, 18)
 ```
 You might want to read through the home page as well and update it to match your description for this year by making changes in `workoutwarsapp/templates/index.html`.
 6. This one is more for captains than for you, but for people to be able to begin using the site, they are going to need to know which team they are on so they can pick it when they sign up. The teams should be sent out before people start signing up.
@@ -375,7 +377,7 @@ workon pqenv
 ```
 2. Navigate to your repository and pull changes:
 ```
-cd /home/pqadmin/workoutwars18
+cd /home/pqadmin/workoutwars21
 git pull origin master
 ```
 3. Let uWSGI and nginx know that the files have been updated:
@@ -383,6 +385,12 @@ git pull origin master
 sudo touch /etc/uwsgi/sites/workoutwars.ini
 ```
 4. You should now see your changes reflected in production!
+
+### Some Useful Tips
+
+1. You can give yourself access to the Coaches page for debugging by changing the nickname in `workoutwars/workoutwarsapp/templates/base.html`
+2. To update the table of workouts on the home page, go to `workoutwars/workoutwarsapp/templates/index.html`. This does NOT change the actual value, just the displayed table.
+3. To hide the scores on the day you announce winners, follow the instructions commented in `workoutwars/workoutwarsapp/templates/scoreboard.html`
 
 
 ### Loading Data Into Application
@@ -409,7 +417,7 @@ ID | description | notes | increment | measurement | multiplier
 1 | downhill skiing | enter time on mountain only | 15 | mins | 1.25
 
 1. Create a csv file with the correct headers for each of the 3 tables. The structure is shown above. Save these as `teams.csv`, `classes.csv`, and `exercises.csv` respectively.
-2. Place these csv files into the `fixtures` folder (inside `workoutwars18/workoutwars`)
+2. Place these csv files into the `fixtures` folder (inside `workoutwars21/workoutwars`)
 3. Make sure your virtual environment is active (instructions listed above, if necessary)
 4. Install simplejson:
 ```

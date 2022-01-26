@@ -48,8 +48,9 @@
         };
 
       // Instantiate and draw our chart, passing in some options.
-      // var chart = new google.visualization.ColumnChart(document.getElementById('class_chart_div')); UNCOMMENT THESE
-      // chart.draw(data, options);
+      // Comment these 2 lines out to hide final scores!
+      var chart = new google.visualization.ColumnChart(document.getElementById('class_chart_div')); UNCOMMENT THESE
+      chart.draw(data, options);
     }
   </script>
 {% endblock %}
@@ -124,19 +125,19 @@
                     <tr>
                       <th>Total</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with class_score-->
+                        <th>{{ "???" }}</th> <!--Replace class_score with "???" to hide-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Normalized</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with class_normalized-->
+                        <th>{{ "???" }}</th> <!--Replace class_normalized with "???" to hide-->
                       {% endfor %}
                     </tr>
                     <tr>
                       <th>Per Day</th>
                       {% for class_name, class_score, class_normalized, per_day in class_scores %}
-                        <th>{{ "???" }}</th> <!--Replace "???" with per_day-->
+                        <th>{{ "???" }}</th> <!--Replace per_day with "???" to hide-->
                       {% endfor %}
                     </tr>
                   </tbody>
