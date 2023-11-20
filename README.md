@@ -1,5 +1,5 @@
-# Workout Wars 2021-2022
-Pie Queens workout wars application
+# Winter Workouts
+Credit to UC Berkeley Pie Queens for initial webpage design.
 
 ## Getting Started
 
